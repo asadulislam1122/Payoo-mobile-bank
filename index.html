@@ -4,8 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Peyoo Mobile bank</title>
+    <!-- daiusyui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tawilwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1>Mobile Bank</h1>
+  <body class="bg-[#f4f5f7] h-[100vh] flex justify-center items-center">
+    <form class="w-[350px] bg-white p-8 rounded-2xl">
+      <div>
+        <label class="font-semibold" for="">Mobile Number</label>
+        <br />
+        <input
+          type="text"
+          placeholder=" Inter Your Number"
+          class="border-none rounded-3xl input bg-[#f4f5f7] mt-5"
+        />
+      </div>
+      <div class="mt-5">
+        <label class="font-semibold" for="">4 Disit Pin</label>
+        <br />
+        <input
+          type="text"
+          placeholder="Inter 4 Disit Pin"
+          class="border-none rounded-3xl input bg-[#f4f5f7] mt-3"
+        />
+      </div>
+
+      <!-- button -->
+      <button class="text-white btn mt-5 bg-[#0874F2] rounded-3xl w-full">
+        Login
+      </button>
+    </form>
   </body>
 </html>
