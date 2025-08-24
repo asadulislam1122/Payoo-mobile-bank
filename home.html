@@ -21,7 +21,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#f4f5f7] h-[100vh]">
+  <body class="bg-[#f4f5f7] h-[120vh]">
     <div class="max-w-lg mx-auto bg-white rounded-b-xl">
       <div
         class="min-h-[50px] flex justify-between items-center border-b-1 border-gray-400 p-4"
@@ -54,11 +54,19 @@
       </div>
       <!-- 3 card section -->
       <div class="min-h-[200px] grid grid-cols-3 mt-6 gap-4 p-4">
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <!-- add money -->
+        <div
+          id="add-money-button"
+          class="border-2 border-gray-300 text-center p-3 rounded-xl"
+        >
           <img class="mx-auto" src="./assets/wallet1.png" alt="" />
           <h2>Add Money</h2>
         </div>
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <!-- cashOut -->
+        <div
+          id="cash-out-button"
+          class="border-2 border-gray-300 text-center p-3 rounded-xl"
+        >
           <img class="mx-auto" src="./assets/send1.png" alt="" />
           <h2>Cashout</h2>
         </div>
@@ -82,7 +90,8 @@
     </div>
     <!-- form -->
     <div class="all-form-section max-w-lg mx-auto">
-      <div>
+      <!-- add money -->
+      <div id="add-money-parents">
         <h1 class="my-5 font-bold ml-4">Add Money</h1>
         <form action="" class="bg-white rounded-2xl p-8">
           <div class="mb-3">
@@ -103,7 +112,7 @@
             <input
               id="accunt-number"
               type="text"
-              placeholder="Enter 11 digit number"
+              placeholder="Enter 11 digit Account number"
               class="border-none rounded-3xl input bg-[#f4f5f7] mt-5 w-full"
             />
           </div>
@@ -133,6 +142,49 @@
             class="text-white btn mt-5 bg-[#0874F2] rounded-3xl w-full"
           >
             Add Money
+          </button>
+        </form>
+      </div>
+      <!-- cash out form -->
+      <div id="cash-out-paraents" style="display: none">
+        <h1 class="my-5 font-bold ml-4">Cash Out</h1>
+        <form action="" class="bg-white rounded-2xl p-8">
+          <div>
+            <label class="font-semibold" for="">Agent Number</label>
+            <br />
+            <input
+              id="agent-number"
+              type="text"
+              placeholder="Enter 11 digit number"
+              class="border-none rounded-3xl input bg-[#f4f5f7] mt-5 w-full"
+            />
+          </div>
+          <div class="mt-3">
+            <label class="font-semibold" for="">Amount</label>
+            <br />
+            <input
+              id="withdraw-amount"
+              type="text"
+              placeholder="Enter Amount to withdraw"
+              class="border-none rounded-3xl input bg-[#f4f5f7] mt-5 w-full"
+            />
+          </div>
+          <div class="mt-3">
+            <label class="font-semibold" for="">Pin Number</label>
+            <br />
+            <input
+              id="amount-pin"
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="border-none rounded-3xl input bg-[#f4f5f7] mt-5 w-full"
+            />
+          </div>
+          <!-- button -->
+          <button
+            id="withdraw-btn"
+            class="text-white btn mt-5 bg-[#0874F2] rounded-3xl w-full"
+          >
+            Withdraw Money
           </button>
         </form>
       </div>
